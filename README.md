@@ -80,3 +80,5 @@ The following Rest APIs are defined in this scenario:
 
 When starting to run this application (e.g. from the IntelliJ IDE), Spring Boot will start an embedded web server that listens on the port (8088) as configured in "application.properties" file. In order to test the Rest APIs, I'm using Postman (https://www.getpostman.com/). 
 
+![Insert a Book] (https://github.com/yabinmeng/springbootcass-basic/blob/master/src/main/resources/rest_insert.png)
+
