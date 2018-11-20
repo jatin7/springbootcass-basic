@@ -75,3 +75,8 @@ The following Rest APIs are defined in this scenario:
 | /api/book/{id} | PUT | <ul> <li> A long value (as book ID) </li>  <li> A JSON document that defines a book </li> </ul> | Make an update to a book in Cassandra table |
 | /api/book/{id} | DELETE | A long value (as book ID) | Delete a specific book from Cassandra table |
 | /api/books | DELETE | None | Delete all books from Cassandra table |
+
+### Testing Rest APIs with Postman
+
+When starting to run this application (e.g. from the IntelliJ IDE), Spring Boot will start an embedded web server that listens on the port (8088) as configured in "application.properties" file. In order to test the Rest APIs, I'm using Postman (https://www.getpostman.com/). 
+
