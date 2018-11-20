@@ -9,7 +9,7 @@ For this scenario, there is NO special configuration for Cassandra such as user 
 
 For this scenario, user autentication is enabled for Cassandra.
 
-**[Scenario 3]**: Use ***Spring Boot*** and ***DataStax Enterprise Java Driver*** to take full potentials of all advanced features as provided by the DataStax driver APIs that are not avaible through Spring Data for Cassandra (or at least in simple and straightforward way), such as flexible load balancing policy, retry policy, connection pooling, more robust object mapping, and a lot more. 
+**[Scenario 3]**: Use ***Spring Boot*** and ***DataStax Enterprise Java Driver*** to take full potentials of all advanced features as provided by the DataStax driver APIs that are not avaible through Spring Data for Cassandra (or at least in simple and straightforward way), such as flexible load balancing policy, retry policy, connection pooling, more robust object mapping, and a lot more: https://github.com/yabinmeng/springbootcass-dseent 
 
 For this scenario, user authentication and client-to-server SSL/TLS encryption are both enabled for Cassandra.
 
