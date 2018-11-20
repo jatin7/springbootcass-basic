@@ -63,7 +63,7 @@ spring.data.cassandra.port = 9042
 server.port=8088
 ```
 
-## Rest APIs and Testing
+## Rest API Definition
 
 The following Rest APIs are defined in this scenario:
 
