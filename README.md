@@ -34,6 +34,8 @@ dependencies {
 }
 ```
 
+The Spring Boot version used in this scenario is version **2.1.0**.
+
 ## Cassandra Schema
 
 For this scenario, the following Cassandra keyspace and table are used (the keyspace replication strategy can be changed to whatever is needed), as defined in "schema.cql" file. The main table is used for keeping track of available books with their titles and authors. 
@@ -60,3 +62,16 @@ spring.data.cassandra.contact-points = 127.0.0.1
 spring.data.cassandra.port = 9042
 server.port=8088
 ```
+
+## Rest APIs and Testing
+
+The following Rest APIs are defined in this scenario:
+
+| Rest API Endpoint | Method | HTTP Payload | Description |
+| --- | --- | --- | --- |
+| /api/books | GET | None | Retrieve all saved books from Cassandra table |
+| /api/book/{id} | GET | A long value (as book ID) | Retrieve a specific book from Cassandra table |
+| /api/book | POST | A JSON document that defines a book | Insert a book into Cassandra table |
+| /api/book/{id} | PUT | <ul> <li> A long value (as book ID) </li>  <li> A JSON document that defines a book </li> </ul> | Make an update to a book in Cassandra table |
+| /api/book/{id} | DELETE | A long value (as book ID) | Delete a specific book from Cassandra table |
+| /api/books | DELETE | None | Delete all books from Cassandra table |
