@@ -12,8 +12,8 @@ This repository is **the first scenario of** a seriers of code templates(example
 
    For this scenario, user authentication and client-to-server SSL/TLS encryption are both enabled for Cassandra.
 
-
 For all scenarios, DataStax Enterprise (DSE) version 5.1.11 is used as the Cassandra database.
 
-Please **NOTE** that among these scenarios, **the third one of using Spring Boot and DataStastx Enterprise Java Driver is the recommended approach**. The first 2 approaches, due to its usage with Spring Data for Cassandra, have some limititations that can't be easily addressed and may cause some issues when connecting to Cassandra.
+Please NOTE:
+Among these scenarios, the third one of using Spring Boot and DataStastx Enterprise Java Driver is the recommended approach. The first 2 approaches, due to its usage with Spring Data for Cassandra, have some limititations that can't be easily addressed and may cause some issues when connecting to Cassandra.
 ---
