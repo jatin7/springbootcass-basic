@@ -78,7 +78,7 @@ The following Rest APIs are defined in this scenario:
 
 ### Testing Rest APIs with Postman
 
-When starting to run this application (e.g. from the IntelliJ IDE), Spring Boot will start an embedded web server that listens on the port (8088) as configured in "application.properties" file. In order to test the Rest APIs, I'm using Postman (https://www.getpostman.com/). 
+When starting to run this application (e.g. from the IntelliJ IDE), Spring Boot will start an embedded web server that listens on the port (8088) as configured in "application.properties" file. In order to test the Rest APIs, I'm using Postman (https://www.getpostman.com/). The screenshot below is an exmple of how to use Rest API to insert a book in Cassandra.
 
-![Insert a Book] (https://github.com/yabinmeng/springbootcass-basic/blob/master/src/main/resources/rest_insert.png)
+<img src="https://github.com/yabinmeng/springbootcass-basic/blob/master/src/main/resources/rest_insert.png" width="800" height="200">
 
