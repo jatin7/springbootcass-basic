@@ -23,7 +23,7 @@ Among these scenarios, **Scenario 3 of using Spring Boot and DataStastx Enterpri
 
 ---
 
-# Scenario 1 Code Description
+# More Notes
 
 ## Cassandra Schema
 
