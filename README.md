@@ -5,7 +5,7 @@ This repository is **The first scenario of** a seriers of code templates(example
 
 For this scenario, there is NO special configuration for Cassandra such as user authentication or client-to-server SSL/TLS encyption, etc.
 
-[Scnenario 2]: Use *Spring Boot* and *Spring Data for Cassandra* for more advanced CRUD operations (composite primary key) on more complex data types (UDTs, collections, blobs, etc.) through command line interface: https://github.com/yabinmeng/springbootcass-advanced 
+[Scnenario 2]: Use *Spring Boot* and *Spring Data for Cassandra* (CassandraRepository) for more advanced CRUD operations (composite primary key) on more complex data types (UDTs, collections, blobs, etc.) through command line interface: https://github.com/yabinmeng/springbootcass-advanced 
 
 For this scenario, user autentication is enabled for Cassandra.
 
