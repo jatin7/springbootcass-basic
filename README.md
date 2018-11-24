@@ -25,20 +25,11 @@ Among these scenarios, **Scenario 3 of using Spring Boot and DataStastx Enterpri
 
 # More Notes
 
-## Cassandra Schema
+## Rest API Port
 
-For this scenario, the following Cassandra keyspace and table are used (the keyspace replication strategy can be changed to whatever is needed), as defined in "schema.cql" file. 
-
-## Cassandra Connetion and Rest API Port
-
-As with many Spring Boot based applications, "application.propertities" file defins many Spring Boot application behavior related settings. For this scenario, it has the following properties:
-* The first 3 propertities define how to connect to Cassandra
-* The last property defines what is the Tomcat web server port for this application's Rest API.
+The embedded Tomcat web server port number can be changed from "server.port" configuration in "application.properties" file
 
 ```
-spring.data.cassandra.keyspace-name = springbootcass
-spring.data.cassandra.contact-points = 127.0.0.1
-spring.data.cassandra.port = 9042
 server.port=8088
 ```
 
