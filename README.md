@@ -27,7 +27,7 @@ Among these scenarios, **Scenario 3 of using Spring Boot and DataStastx Enterpri
 
 ## Rest API Port
 
-The embedded Tomcat web server port number can be changed from "server.port" configuration in "application.properties" file
+The embedded Tomcat web server port number (default 8080) can be changed from "server.port" configuration in "application.properties" file.
 
 ```
 server.port=8088
