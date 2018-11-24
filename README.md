@@ -5,18 +5,21 @@ This repository is **the first scenario of** a seriers of code templates(example
 
 For this scenario, there is NO special configuration for Cassandra such as user authentication or client-to-server SSL/TLS encyption, etc.
 
-**[Scnenario 2]**: Use ***Spring Boot*** and ***Spring Data for Cassandra*** for more advanced CRUD operations (composite primary key) on more complex data types (UDTs, collections, blobs, etc.) through command line interface: https://github.com/yabinmeng/springbootcass-advanced 
+[Scnenario 2]: Use *Spring Boot* and *Spring Data for Cassandra* for more advanced CRUD operations (composite primary key) on more complex data types (UDTs, collections, blobs, etc.) through command line interface: https://github.com/yabinmeng/springbootcass-advanced 
 
 For this scenario, user autentication is enabled for Cassandra.
 
-**[Scenario 3]**: Use ***Spring Boot*** and ***DataStax Enterprise Java Driver*** to take full potentials of all advanced features as provided by the DataStax driver APIs that are not avaible through Spring Data for Cassandra (or at least in simple and straightforward way), such as flexible load balancing policy, retry policy, connection pooling, more robust object mapping, and a lot more: https://github.com/yabinmeng/springbootcass-dseent 
+[Scenario 3]: Use *Spring Boot* and *DataStax Enterprise Java Driver* to take full potentials of all advanced features as provided by the DataStax driver APIs that are not avaible through Spring Data for Cassandra (or at least in simple and straightforward way), such as flexible load balancing policy, retry policy, connection pooling, more robust object mapping, and a lot more: https://github.com/yabinmeng/springbootcass-dseent 
 
 For this scenario, user authentication and client-to-server SSL/TLS encryption are both enabled for Cassandra.
 
 ---
 
-Please **NOTE**:
-* For all scenarios, DataStax Enterprise (DSE) version 5.1.11 is used as the Cassandra database.
+Please **NOTE** that for all scenarios, 
+1) DataStax Enterprise (DSE) version 5.1.11 is used as the Cassandra database.
+2) Spring Boot version 2.1.o is used 
+
+---
 
 * Among these scenarios, **the third one of using Spring Boot and DataStastx Enterprise Java Driver is the recommended approach**. The first 2 approaches, due to its usage with Spring Data for Cassandra, have some limititations that can't be easily addressed and may cause some issues (e.g. unnecessary tombstones) when interacting with Cassandra.
 
@@ -24,34 +27,9 @@ Please **NOTE**:
 
 # Scenario 1 Code Description
 
-## Spring Boot Project Dependency
-
-The code project for this scenario is Gradle based. To help simpilfy and speed up Spring Boot application development, the basic project structure and dependency can be simply built up from Spring Initialize Web UI (https://start.spring.io/), which will create a zip file that can be downloaded and imported into local Java IDEs (e.g. IntelliJ) 
-
-For this scenario, there are two dependencies required for the Spring Boot application: Web and Cassandra. Correspondingly, the generated "build.gradle" file has the following 2 dependency lines.
-
-```
-dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-data-cassandra')
-	implementation('org.springframework.boot:spring-boot-starter-web')
-}
-```
-
-The Spring Boot version used in this scenario is version **2.1.0**.
-
 ## Cassandra Schema
 
-For this scenario, the following Cassandra keyspace and table are used (the keyspace replication strategy can be changed to whatever is needed), as defined in "schema.cql" file. The main table is used for keeping track of available books with their titles and authors. 
-
-```
-CREATE KEYSPACE IF NOT EXISTS springbootcass WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
-
-CREATE TABLE IF NOT EXISTS springbootcass.book (
-    id bigint PRIMARY KEY,
-    author text,
-    title text
-);
-```
+For this scenario, the following Cassandra keyspace and table are used (the keyspace replication strategy can be changed to whatever is needed), as defined in "schema.cql" file. 
 
 ## Cassandra Connetion and Rest API Port
 
