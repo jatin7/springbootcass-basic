@@ -5,6 +5,15 @@ This repository is **The first scenario of** a seriers of code templates(example
 
 For this scenario, there is NO special configuration for Cassandra such as user authentication or client-to-server SSL/TLS encyption, etc.
 
+
+1. git clone https://github.com/yabinmeng/springbootcass-basic
+2. vi src/main/resources/application.properties
+3. cqlsh -u 'my_username' -p 'my_password' -f src/main/resources/schema.cql
+4. gradle bootRun
+
+
+
+
 [Scnenario 2]: Use *Spring Boot* and *Spring Data for Cassandra* (CassandraRepository in particular) for more advanced CRUD operations (composite primary key) on more complex data types (UDTs, collections, blobs, etc.) through command line interface: https://github.com/yabinmeng/springbootcass-advanced 
 
 For this scenario, user autentication is enabled for Cassandra.
